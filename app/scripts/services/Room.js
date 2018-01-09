@@ -6,6 +6,11 @@
 
     Room.all = rooms;
 
+    Room.add = function(room) {
+      var roomName = document.getElementById('roomName').value;
+      return rooms.$add(roomName);
+    }
+
     return Room;
   }
 
