@@ -1,8 +1,16 @@
- <div ng-repeat="room in home.rooms">
-   Here are the rooms available: <h1>{{ room.$value}}</h1>
- </div>
-<form>
-  Type the name of the new room you want to create:<br>
-  <input type="text" name="firstname" id="roomName"><br>
-  <input type="submit" value="Submit" ng-click="Room.add">
-</form>
+<section class="main-content">
+  <section class="rooms-available">
+    <h1>BLOC CHAT:</h1>
+    <div ng-repeat="room in home.rooms">
+      <ul class="nav nav-pills nav-stacked">
+        <li ng-mouseover="hovered = true ">
+          <a class="active" ng-show="hovered">{{ room.$value }}</a>
+          <a ng-show="!hovered">{{ room.$value }}</a>
+        </li>
+      </ul>
+    </div>
+    <p class="button">
+      <button ng-click="home.openNewRoomModal()">Create a new room</button>
+    </p>
+  </section>
+</section>
