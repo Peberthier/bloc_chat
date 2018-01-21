@@ -1,12 +1,15 @@
-<div class="modal-header">
-    <h3 class="modal-title">Create a new room</h3>
-</div>
+<form ng-submit='$ctrl.ok()'>
+    <div class="modal-header">
+        <h3 class="modal-title">Create a new room</h3>
+    </div>
 
-<div class="modal-body">
-    Enter a room name:
-    <form>
-      <input type="text" id="roomName"> <br />
-      <input type="submit" ng-click="$ctrl.cancel()" value="Cancel">
-      <input type="submit" ng-click="$ctrl.ok()" value="ok">
-    </form>
-</div>
+    <div class="modal-body">
+        Enter a room name:
+        <input type="text" id="roomName" ng-model="$ctrl.newroom" placeholder="New room name">
+    </div>
+
+    <div class="modal-footer">
+        <input type="submit" ng-click="$ctrl.cancel()" value="Cancel">
+        <input type="submit"  value="ok">
+    </div>
+</form>

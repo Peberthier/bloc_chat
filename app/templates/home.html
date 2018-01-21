@@ -1,10 +1,10 @@
 <section class="main-content">
-  <section class="rooms-available">
+  <section class="rooms-available navbar-fixed-left">
     <h1>BLOC CHAT:</h1>
-    <div ng-repeat="room in home.rooms">
+    <div>
       <ul class="nav nav-pills nav-stacked">
-        <li ng-mouseover="hovered = true ">
-          <a class="active" ng-show="hovered">{{ room.$value }}</a>
+        <li ng-repeat="room in home.rooms" ng-mouseover="hovered = true ">
+          <a class="active" ng-show="hovered" ng-click="home.setActiveRoom(room)">{{ room.$value }}</a>
           <a ng-show="!hovered">{{ room.$value }}</a>
         </li>
       </ul>
@@ -13,4 +13,22 @@
       <button ng-click="home.openNewRoomModal()">Create a new room</button>
     </p>
   </section>
+
+  <section id="selected-room">
+    <h1 id="Room-title">{{ home.activeRoom.$value }}</h1>
+    <ul class="messages">
+      <li class="message-content" ng-repeat="message in home.messages" style="border">
+        <div >
+          <div >
+            <h5 >{{ message.userName }}</h5>
+          </div>
+          <div>
+            <a>{{ message.content }}</a>
+            <a id="time">{{ message.sentAt }}</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
 </section>

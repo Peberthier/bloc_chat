@@ -1,0 +1,37 @@
+.Messages {
+  position:relative;
+}
+
+.rooms-available {
+  float: left;
+  width: 25%;
+  height: 100vh;
+  background-color: rgb(211,211,211);
+  position: relative;
+  color: rgb(0,0,0);
+}
+
+.button {
+  text-align: center;
+}
+
+.main-content {
+  background-color: rgb(255,255,255);
+}
+
+.message-content:nth-child(odd) {
+    background: rgb(246,247,251);
+}
+
+.message-content:nth-child(even) {
+    background: white;
+}
+
+.media-body {
+  margin-left: 5px;
+}
+
+#time {
+  position: absolute;
+  left: 95%;
+}

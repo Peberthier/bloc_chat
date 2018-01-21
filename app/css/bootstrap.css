@@ -6754,22 +6754,6 @@ button.close {
     display: none !important;
   }
 }
-.rooms-available {
-  float: left;
-  width: 25%;
-  height: 100rem;
-  background-color: rgb(211,211,211);
-  position: left;
-  color: rgb(0,0,0);
-}
-
-.button {
-  text-align: center;
-}
-
-.main-content {
-  background-color: rgb(255,255,255);
-}
 
 
 /*# sourceMappingURL=bootstrap.css.map */
