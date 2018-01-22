@@ -13,7 +13,9 @@
             templateUrl: '/templates/home.html'
         });
 }
+
+
      angular
-         .module('blocChat', ['ui.bootstrap', 'ui.router', 'firebase'])
+         .module('blocChat', ['ui.bootstrap', 'ui.router', 'firebase', 'ngCookies'])
          .config(config);
  })();

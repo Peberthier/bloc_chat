@@ -1,0 +1,14 @@
+<form ng-submit='$user.ok()'>
+    <div class="modal-header">
+        <h3 class="modal-title">Create a new user</h3>
+    </div>
+
+    <div class="modal-body">
+        Enter a user name:
+        <input type="text" id="roomName" ng-model="$user.blocChatCurrentUser" placeholder="New user name">
+    </div>
+
+    <div class="modal-footer">
+        <input type="submit"  value="ok">
+    </div>
+</form>
