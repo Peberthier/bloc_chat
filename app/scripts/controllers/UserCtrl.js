@@ -2,11 +2,11 @@
     function UserCtrl($uibModalInstance, $cookies) {
       var $user = this;
 
-      this.blocChatCurrentUser = '';
+      this.blocChatCurrentUser = null;
 
       $user.ok = function() {
         $uibModalInstance.close();
-        $cookies.put('user', this.blocChatCurrentUser)
+        $cookies.put('User', this.blocChatCurrentUser)
       };
 
     }
