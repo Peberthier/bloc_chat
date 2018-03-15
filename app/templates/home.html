@@ -26,12 +26,20 @@
             <a>{{ message.content }}</a>
             <a id="time">{{ message.sentAt }}</a>
           </div>
-          <div class="modal-body">
-
-
-        </div>
-      </li>
+        </li>
     </ul>
+
   </section>
+  <form ng-submit="home.ok()" ng-show="home.activeRoom">
+      <div class="modal-body">
+        Enter a new message:
+        <input type="text" ng-model="home.newmessage">
+      </div>
+
+      <div class="modal-footer">
+        <input type="button" ng-click="home.cancel()" value="Cancel">
+        <input type="submit"  value="ok">
+      </div>
+  </form>
 
 </section>
